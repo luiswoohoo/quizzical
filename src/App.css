@@ -70,3 +70,11 @@ hr {
     align-items: center;
     gap: 2rem;
 }
+
+@media (max-width: 600px) {
+    .ans-section {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+  }
+  
