@@ -76,5 +76,9 @@ hr {
         display: grid;
         grid-template: 1fr 1fr / 1fr 1fr;
     }
+
+    .ans-btn {
+        font-size: 1.5rem;
+    }
   }
   

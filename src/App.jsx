@@ -3,6 +3,8 @@ import './App.css'
 
 import { nanoid, random } from 'nanoid'
 import he from 'he'
+import Confetti from "react-confetti"
+
 import Answer from './components/Answer'
 
 export default function App() {
@@ -192,6 +194,7 @@ export default function App() {
             )}
             {quizStarted && (
                 <div className="quiz-page">
+                    {quizScore === 5 && <Confetti />}
                     <div>{questionElements}</div>
                     <div className="score-section">
                         {quizScore > -1 && (
