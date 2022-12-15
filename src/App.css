@@ -1,0 +1,72 @@
+.start-page, .quiz-page {
+    max-width: 600px;
+    color: hsl(231deg 42% 28%);
+}
+
+.start-page, .quiz-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-page > h1 {
+    font-size: 4rem;
+}
+
+.start-quiz-btn, .quiz-btn {
+    border: 2px solid hsl(230deg 34% 46%);
+    background-color: hsl(230, 34%, 46%);
+    color: hsl(220, 43%, 97%);
+    cursor: pointer;
+}
+
+.start-quiz-btn {
+    min-width: 14rem;
+    min-height: 5rem;
+    padding: .5rem 1rem;
+    font-size: 2rem;
+    border-radius: 15px;
+}
+
+.quiz-btn {
+    min-width: 7rem;
+    max-height: 2.5rem;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.question {
+    font-size: 1.5rem;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: .75rem;
+    border: 0;
+    height: 1px;
+    background-color: hsl(231, 41%, 90%);
+}
+
+.ans-section {
+    display: flex;
+    gap: 2rem;
+}
+
+.ans-btn {
+    min-width: 3.8rem;
+    min-height: 1.8rem;
+    padding: .4rem .8rem;
+    border: 2px solid hsl(230deg 34% 46%);
+    border-radius: 12px;
+    color: hsl(231deg 42% 28%);
+    cursor: pointer;
+}
+
+.score-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
