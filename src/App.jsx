@@ -13,6 +13,12 @@ export default function App() {
     const [quizScore, setQuizScore] = React.useState(-1)
     const [getNewQuizData, setGetNewQuizData] = React.useState(false)
 
+    let scrollHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+      );
+
     // Get quiz data from API
     React.useEffect(() => {
         const categories = [9, 17, 22, 23, 25, 27]
@@ -194,8 +200,8 @@ export default function App() {
             )}
             {quizStarted && (
                 <div className="quiz-page">
-                    {quizScore === 5 && <Confetti />}
                     <div>{questionElements}</div>
+                    {quizScore > 0 && <Confetti height={scrollHeight + 200}/>}
                     <div className="score-section">
                         {quizScore > -1 && (
                             <h2>
