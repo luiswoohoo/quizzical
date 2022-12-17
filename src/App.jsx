@@ -130,6 +130,8 @@ export default function App() {
                                 styleAfterCheck: {
                                     backgroundColor: 'hsl(133deg 46% 71%)',
                                     color: 'hsl(231deg 42% 28%)',
+                                    fontWeight: 'bold',
+                                    border: 'none'
                                 },
                             }
                         } else if (!ans.isCorrectAns && ans.isSelected) {
@@ -139,6 +141,7 @@ export default function App() {
                                 styleAfterCheck: {
                                     backgroundColor: 'hsl(0deg 81% 85%)',
                                     color: 'hsl(236deg 17% 63%)',
+                                    border: 'none'
                                 },
                             }
                         } else {
@@ -148,6 +151,7 @@ export default function App() {
                                 styleAfterCheck: {
                                     backgroundColor: 'hsl(0deg 0%, 100%)',
                                     color: 'hsl(236deg 17% 63%)',
+                                    border: 'none'
                                 },
                             }
                         }
@@ -210,7 +214,7 @@ export default function App() {
                     <div className="score-section">
                         {quizScore > -1 && (
                             <h2>
-                                You scored {quizScore} out of {quizGameData.length} correct answers
+                                You scored {quizScore} out of {quizGameData.length} correct answers {quizScore === 5 ? '🥳' : ''}
                             </h2>
                         )}
                         {quizScore === -1 ? (
