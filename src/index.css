@@ -3,9 +3,29 @@
 }
 
 body {
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Karla', sans-serif;
+    margin: 0 auto;
+}
+
+.social-link {
+    display: flex;
+    justify-content:right;
+    gap: .5rem;
+    width: 100%;
+    margin-bottom: auto;
+}
+
+.social-link a {
+    text-decoration: none;
+    color: hsl(231deg 42% 28%);
+}
+
+footer {
+    font-size: .6rem;
+    margin-top: auto;
 }

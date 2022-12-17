@@ -10,8 +10,14 @@
     align-items: center;
 }
 
-.start-page > h1 {
-    font-size: 4rem;
+.start-page {
+    gap: 2rem;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem;
+    margin: 0;
 }
 
 .start-quiz-btn, .quiz-btn {
@@ -19,13 +25,15 @@
     background-color: hsl(230, 34%, 46%);
     color: hsl(220, 43%, 97%);
     cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 .start-quiz-btn {
-    min-width: 14rem;
-    min-height: 5rem;
+    min-width: 13rem;
+    min-height: 4.5rem;
     padding: .5rem 1rem;
-    font-size: 2rem;
+    font-size: 1.9rem;
     border-radius: 15px;
 }
 

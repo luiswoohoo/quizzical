@@ -3,7 +3,7 @@ import './App.css'
 
 import { nanoid, random } from 'nanoid'
 import he from 'he'
-import Confetti from "react-confetti"
+import Confetti from 'react-confetti'
 
 import Answer from './components/Answer'
 
@@ -14,10 +14,13 @@ export default function App() {
     const [getNewQuizData, setGetNewQuizData] = React.useState(false)
 
     let scrollHeight = Math.max(
-        document.body.scrollHeight, document.documentElement.scrollHeight,
-        document.body.offsetHeight, document.documentElement.offsetHeight,
-        document.body.clientHeight, document.documentElement.clientHeight
-      );
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.offsetHeight,
+        document.body.clientHeight,
+        document.documentElement.clientHeight
+    )
 
     // Get quiz data from API
     React.useEffect(() => {
@@ -40,7 +43,7 @@ export default function App() {
     }
 
     function startNewQuiz() {
-        setGetNewQuizData(prevState => !prevState)
+        setGetNewQuizData((prevState) => !prevState)
         setQuizScore(() => -1)
     }
 
@@ -192,7 +195,7 @@ export default function App() {
         <div>
             {!quizStarted && (
                 <div className="start-page">
-                    <h1>Quizzical</h1>
+                    <h1 className='title'>Quizzical</h1>
                     <button className="start-quiz-btn" onClick={startQuiz}>
                         Start quiz
                     </button>
@@ -201,7 +204,7 @@ export default function App() {
             {quizStarted && (
                 <div className="quiz-page">
                     <div>{questionElements}</div>
-                    {quizScore > 0 && <Confetti height={scrollHeight + 200}/>}
+                    {quizScore === 5 && <Confetti height={scrollHeight} />}
                     <div className="score-section">
                         {quizScore > -1 && (
                             <h2>
@@ -213,10 +216,7 @@ export default function App() {
                                 Check answers
                             </button>
                         ) : (
-                            <button
-                                className="quiz-btn"
-                                onClick={startNewQuiz}
-                            >
+                            <button className="quiz-btn" onClick={startNewQuiz}>
                                 Play again
                             </button>
                         )}
