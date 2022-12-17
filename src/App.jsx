@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 
-import { nanoid, random } from 'nanoid'
+import { nanoid } from 'nanoid'
 import he from 'he'
 import Confetti from 'react-confetti'
 
@@ -13,6 +13,8 @@ export default function App() {
     const [quizScore, setQuizScore] = React.useState(-1)
     const [getNewQuizData, setGetNewQuizData] = React.useState(false)
 
+    // Calculate height of window. This is done so that the
+    // Confetti component renders confetti across the entire height of the screen
     let scrollHeight = Math.max(
         document.body.scrollHeight,
         document.documentElement.scrollHeight,
@@ -24,6 +26,7 @@ export default function App() {
 
     // Get quiz data from API
     React.useEffect(() => {
+        // Categories from API
         const categories = [9, 17, 22, 23, 25, 27]
         randomizeArray(categories)
 
@@ -165,7 +168,6 @@ export default function App() {
                 }
             }
         }
-
         setQuizScore(correctAnswers)
     }
 
