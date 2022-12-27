@@ -202,8 +202,12 @@ export default function App() {
             {!quizStarted && (
                 <div className="start-page">
                     <h1 className='title'>Quizzical</h1>
-                    <button className="start-quiz-btn" onClick={startQuiz}>
-                        Start quiz
+                    <button className="pushable" onClick={startQuiz}>
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front">
+                            Start quiz
+                        </span>
                     </button>
                 </div>
             )}
